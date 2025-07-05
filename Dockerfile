@@ -34,7 +34,7 @@ COPY ./scripts/wait-for-it.sh /wait-for-it.sh
 RUN chmod +x /wait-for-it.sh
 
 # Expose the necessary port
-EXPOSE 8006
+EXPOSE 8010
 
 # Set the entrypoint to wait for MariaDB to be ready before starting the application
-CMD ["/wait-for-it.sh", "wallet_db:27013", "--", "./api"] 
+CMD ["/wait-for-it.sh", "wallet_db:27017", "--", "./api"] 
